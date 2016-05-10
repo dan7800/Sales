@@ -1,7 +1,15 @@
+server:
+  applicationConnectors:
+  - type: http 
+    port: 8069
+  adminConnectors:
+  - type: http
+    port: 8070
+    
 database:
   # the name of your JDBC driver
   driverClass: com.mysql.jdbc.Driver
-
+  
   # the username
   user: root
 
