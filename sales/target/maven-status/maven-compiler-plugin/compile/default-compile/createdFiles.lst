@@ -1,0 +1,9 @@
+com/krutzcorp/sales/resources/CSResource.class
+com/krutzcorp/sales/SalesConfiguration.class
+com/krutzcorp/sales/models/CSRequest.class
+com/krutzcorp/sales/resources/SalesResource.class
+com/krutzcorp/sales/models/MakeSaleRequest.class
+com/krutzcorp/sales/SalesApplication.class
+com/krutzcorp/sales/models/Refund.class
+com/krutzcorp/sales/models/Invoice.class
+com/krutzcorp/sales/SalesModule.class

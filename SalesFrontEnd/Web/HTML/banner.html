@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %} 
+	<dir id = "banner">
+		<center>
+			<table>
+				<tr>
+					<td>
+						<a href = "."><img id="saleslogo" src="{% static 'Web/SalesLogo.png' %}"/> </a>
+					</td>
+					<td>
+						<p class = "banner"><b>Sales<b></p>
+					</td>
+				</tr>
+			</table>
+		</center>
+		{% if not type %}
+			Welcome! Please Sign In
+		{% else %}
+			Welcome {{type}}!
+		{% endif %}
+	</dir>
+</html>

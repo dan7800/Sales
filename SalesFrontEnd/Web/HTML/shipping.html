@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %} 
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'Web/style.css' %}" />
+	</head>
+	{% include "banner.html" %}
+	<body>
+		<dir>
+			<center>
+				<h1>Shipping</h1>
+			</center>
+		</dir>
+		<dir>
+			<center>
+				<table class = "summary">
+					<tr>
+						<td>
+							Model
+						</td>
+						<td>
+							Quantity
+						</td>
+						<td>
+							Price
+						</td>
+						<td>
+							Quantitiy*Price
+						</td>
+					</tr>
+					{% include "summaryB.html" %}
+					{% include "summaryM.html" %}
+					{% include "summaryH.html" %}
+					{% include "summaryT.html" %}
+				</table>
+				<br>
+				{% if not success %}
+					<form action="shipping" method="post">
+					Address: <input type="text" name="address">
+					<input type="submit" >
+					<br>
+					{% if message.0 %}
+						<font color = red>{{message.0}}</font>
+					{% else %}
+						<br>
+					{% endif %}
+					</form>
+				{% else %}
+					Thank You for your order!
+					<br>
+					<a href="order"id="button">Back</a>
+				{% endif %}
+			</center>
+		</dir>
+	</body>
+</html>

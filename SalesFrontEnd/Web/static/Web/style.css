@@ -1,0 +1,35 @@
+dir {
+	background: #FFFFFF;
+	padding: 10px;
+	border: 2px solid black;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+table.summary {
+	width: 75%;
+	table-layout: fixed;
+}
+
+input.amount {
+	width: 50px;
+}
+
+p.banner {
+	font-size: 50px;
+}
+
+img {
+  max-width:75px;
+  max-height:75px;
+  width: auto;
+  height: auto;
+}
+
+body {
+	background: #3589DC;
+}
+
+textarea {
+    resize: none;
+}

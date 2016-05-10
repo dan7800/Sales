@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %} 
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'Web/style.css' %}" />
+	</head>
+	{% include "banner.html" %}
+	<body>
+		<dir>
+			<center>
+				<h1>Login</h1>
+			</center>
+		</dir>
+		<dir>
+			<form action="" method="post">
+				<center>
+					<table>
+						<tr>
+							<td>
+								<select name="borc">
+								  <option value="Business">Business</option>
+								  <option value="Customer">Customer</option>
+								</select>
+							</td>
+							<td>
+								<input type="submit" >
+							</td>
+						</tr>
+					</table>
+				</center>
+			</form>
+		</dir>
+	  
+	</body>
+</html>

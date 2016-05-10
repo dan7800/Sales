@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %} 
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'Web/style.css' %}" />
+	</head>
+	{% include "banner.html" %}
+	<body>
+		<dir>
+			<center>
+				<h1>Order</h1>
+			</center>
+		</dir>
+		<dir>
+			<form action="order" method="post">
+				<!--%for phones in phonelist&-->
+				<center>
+					<table>
+						<tr>
+							<td>
+								<center>
+								Phone B:
+									{% if amtB %}
+										<input type="text" name="amtB" class="amount" value={{amtB}}>
+									{% else %}
+										<input type="text" name="amtB" class="amount" value=0>
+									{% endif %}
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<center>
+									{% if message.0 %}
+										<font color = red>{{message.0}}</font>
+									{% else %}
+										<br>
+									{% endif %}
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<center>
+									Phone H:
+									{% if amtM %}
+										<input type="text" name="amtM" class="amount" value={{amtM}}>
+									{% else %}
+										<input type="text" name="amtM" class="amount" value=0>
+									{% endif %}
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<center>
+									{% if message.1 %}
+										<font color = red>{{message.1}}</font>
+									{% else %}
+										<br>
+									{% endif %}
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<center>
+									Phone H:
+									{% if amtC %}
+										<input type="text" name="amtH" class="amount" value={{amtH}}>
+									{% else %}
+										<input type="text" name="amtH" class="amount" value=0>
+									{% endif %}
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<center>
+									{% if message.2 %}
+										<font color = red>{{message.2}}</font>
+									{% else %}
+										<br>
+									{% endif %}
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<center>
+									{% if message.3 %}
+										<font color = red>{{message.3}}</font>
+									{% else %}
+										<br>
+									{% endif %}
+								</center>
+							</td>
+						<tr>
+						<tr>
+							<td>
+								<center>
+									<input type="submit" >
+								</center>
+							</td>
+						</tr>
+					</table>
+				</center>
+			</form>
+		</dir>
+	</body>
+</html>
