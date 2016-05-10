@@ -35,7 +35,7 @@ def order(request):
 				message[3] = "To order, you must request at least one phone"
 			#is the sum of all these text inputs greater than 10 thousand ? (for business)
 			elif ((amtB+amtM+amtH) < 10000) and type == "Business":
-				message[3] = "You've ordered: {} phones. You must request at least 10,0000 phones. ".format(amtB+amtM+amtH)
+				message[3] = "You've ordered: {} phones. You must request at least 10,000 phones. ".format(amtB+amtM+amtH)
 			else:
 				o = Order()
 				o.amtB = amtB
