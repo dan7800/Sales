@@ -2,6 +2,12 @@ package com.krutzcorp.sales.models;
 
 import java.util.ArrayList;
 
+//Refund object used to carry out the refund process. It is started when Customer Service
+//initiates it by hitting the /processRefund endpoint with a ticketID. This class is then
+//supposed to hit Customer Support for a list of the phone's serial numbers, and then
+//hit Accounting to report the refund. It will then return accounting's transaction ID
+//and use that to determine if the refund was successful, outputting a message depending
+//on the results.
 public class Refund {
 
     private String ticketId;
@@ -37,7 +43,7 @@ public class Refund {
         return ticketId;
     }
 
-    private long reportRefund() {
+    public long reportRefund() {
         //Contact Accounting API to report refund
         return 20;
     }

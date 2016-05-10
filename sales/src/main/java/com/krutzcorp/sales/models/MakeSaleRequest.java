@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Objects;
 
 /**
- * Just a basic POJO to represent the body of a request to the /customersupport endpoint.
+ * Represents the request to the /makeTransaction endpoint.
  */
 public class MakeSaleRequest {
 

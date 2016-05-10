@@ -6,23 +6,12 @@ import io.dropwizard.Application;
 import io.dropwizard.jdbi.DBIFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.skife.jdbi.v2.DBI;
 import com.krutzcorp.sales.resources.*;
 
-import javax.servlet.DispatcherType;
-import javax.servlet.FilterRegistration;
-import java.util.EnumSet;
-
 /**
- * Mostly boilerplate code to get a DropWizard App going.  This class sets up
- * the connections for dependency injection and different modules that will
- * be used.
- *
- * To run, execute this class with program args:
- * server asales.yaml
- *
- * The webservice will start on port 8069.
+ * Dropwizard boilerplate
+ * The webservice will start on port 8080.
  */
 public class SalesApplication extends Application<SalesConfiguration> {
 

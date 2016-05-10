@@ -4,6 +4,7 @@ import com.google.inject.Binder;
 import com.google.inject.Module;
 import org.skife.jdbi.v2.DBI;
 
+//DB configuration (if set up)
 public class SalesModule implements Module {
 	private DBI jdbi;
 

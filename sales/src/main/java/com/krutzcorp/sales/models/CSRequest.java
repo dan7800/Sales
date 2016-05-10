@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Objects;
 
 /**
- * Just a basic POJO to represent the body of a request to the /processRefund endpoint.
+ * Represents the request to the /processRefund endpoint.
  */
 public class CSRequest {
 
