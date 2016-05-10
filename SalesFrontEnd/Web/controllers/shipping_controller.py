@@ -30,22 +30,22 @@ def shipping(request):
 			o.save()
 			success = True
 			#begin hardcoded api calls
-			url = 'http://localhost:8069/makeTransaction'
-			userid = 0
-			product_id = 0
-			quantity = 0
-			if type == "Customer":
-				userid = 1
-			if amtM > 0:
-				product_id = 1
-				quantity = amtM
-			elif amtH > 0:
-				product_id = 2
-				quantity = amtH
-			else:
-				quantity = amtB
-			data = {'userId': userid, 'product_id':product_id, 'quantity':quantity}
-			headers = {'Content-Type': 'application/json'}
-			r = requests.post(url, data=json.dumps(data), headers=headers)
+			#url = 'http://localhost:8069/makeTransaction'
+			#userid = 0
+			#product_id = 0
+			#quantity = 0
+			#if type == "Customer":
+			#	userid = 1
+			#if amtM > 0:
+			#	product_id = 1
+			#	quantity = amtM
+			#elif amtH > 0:
+			#	product_id = 2
+			#	quantity = amtH
+			#else:
+			#	quantity = amtB
+			#data = {'userId': userid, 'product_id':product_id, 'quantity':quantity}
+			#headers = {'Content-Type': 'application/json'}
+			#r = requests.post(url, data=json.dumps(data), headers=headers)
 	context = {'success':success, 'message':message, 'type':type, 'totalT':totalT, 'totalB':totalB, 'totalM':totalM, 'totalH':totalH, 'costB':costB, 'costM':costM, 'costH':costH, 'amtB':amtB, 'amtM':amtM, 'amtH':amtH}
 	return render(request, 'shipping.html', context)
